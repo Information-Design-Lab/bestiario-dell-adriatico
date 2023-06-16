@@ -1,0 +1,920 @@
+
+@font-face {
+    font-family:"larken";
+    src:url("https://use.typekit.net/af/3167c3/0000000000000000774c4d8f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/3167c3/0000000000000000774c4d8f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/3167c3/0000000000000000774c4d8f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display: auto;  font-stretch:normal;
+    }
+
+
+html{
+    padding: 0px;
+    margin: 0px;
+    background-color: #0A0A0A;
+}
+
+.btn-menu{
+    display: none;
+}
+
+body {
+    padding: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "larken";
+    background-color: #0a0a0a;
+}
+
+.titolo{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.titolo img{
+    width: 70vw;
+}
+
+.container-fluid-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    position: sticky;
+    height: 6vh;
+    top: 0;
+    background-color: #0a0a0a;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+    z-index: 1;
+    margin-top: 5.5px;
+    font-weight: 300;
+}
+
+.container-fluid-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.8vw;
+    margin-top: 2vh;
+    height: 17vh;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: white;
+    /* padding-top: 35vh; */
+    margin-left: 1.8vw;
+    margin-right: 1.8vw;
+    line-height: 2;
+    font-weight: 300;
+    z-index:3;
+}
+
+.container-fluid-footer p{
+margin: 0;
+}
+
+.container-fluid-header p{
+    font-size: 1.2vw;
+}
+
+.titolopagine{
+    font-size: 4.6vw;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    margin: 20px 20px -10px;
+}
+
+.titolo_specie{
+    font-size: 4.6vw;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+    margin: 20px 20px -10px;
+}
+
+.mappa-home { 
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.mappa-home.visible {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.hidden-button {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+#map_granchio { 
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+
+#map_flauto { 
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_pesce_palla { 
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_coniglio_bruno { 
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_pesce_pappagallo { 
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_corridore_atlantico{
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_caulerpa{
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+#map_coniglio_striato{
+    position:fixed;
+    height: 100vh;
+    width: 70vw; 
+    right: -50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-position: center;
+    z-index: 2;
+}
+
+
+.mappa-home {
+   /* pointer-events: none; */
+}
+
+.about{
+    margin-right: 20px;   
+}
+
+.logo{
+    float: left;
+   padding-left: 20px;
+    font-size: 28px;
+    width: 20vw;
+}
+
+.intro{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+.gradient {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 30vw;
+    /* background: rgb(0,0,0); */
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 60%, rgba(0,0,0,0.6657256652661064) 79%, rgba(0,0,0,0) 100%); */
+}
+
+.text p{
+    color: white;
+    padding: 1.7vw;
+    font-size: 1.3vw;
+}
+
+.text h1 {
+    padding: 2vw 2vw 4vw;
+    margin: 0px;
+    color: white;
+}
+
+.INaturalist{
+    color: white;
+    font-weight: 300;
+}
+
+.text{
+    width: 90vw;
+    height: 25vh;
+}
+
+.freccia_iniaziative{
+    width: 6vw;
+    padding: 0 1.7vw 0;
+    float: left;
+}
+
+.text_iniziative p{
+    color: white;
+    padding: 1.7vw;
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+.sottotitolo{
+    padding: 0 1.8vw;
+
+    color: white;
+    font-style: italic;
+    font-size: 2.3vw;
+}
+
+h3{
+    color: white;
+    padding: 1.7vw 1.7vw 0 1.7vw;
+    margin: -0.3vh;
+    font-size: 2.2vw
+}
+    
+.freccia_obliqua{
+    float: left;
+    width: 2vw;
+    margin: 0.3vh 1.8vw 2vh;
+}
+
+.tornasu{
+    width: 3.5vw;
+}
+
+
+/*.globo {
+    height: 65vh;
+    width: 40vw;
+    background-color: red;
+    position: absolute;
+    right: 20px;
+}*/
+
+.scrolly {
+    position: relative;
+    display: flex;
+}
+
+.scrollable-column {
+    width: 33vw;
+}
+
+/*
+.sticky-column {
+    width: 70vw;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    background-color: red;
+}*/
+
+.sticky-column p {
+    padding: 20px;
+    font-size: 30px;
+    margin: 0px;
+    color: #000;
+}
+
+.step {
+    background-color: black;
+    color: white;
+    min-height: 55vh;
+    transform: scale(1);
+    transform-origin: center left;
+    transition: transform 0.15s ease-in;
+    margin-bottom: 9vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.step_mare{
+    background-color: black;
+    color: white;
+    min-height: 55vh;
+    transform: scale(1);
+    transform-origin: center left;
+    transition: transform 0.15s ease-in;
+    margin-bottom: 9vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.mari_italia{
+    font-style: italic;
+}
+
+.step_lungo{
+    background-color: black;
+    color: white;
+    min-height: 60vh;
+    width: 95vw;
+    margin-right: 1.8vw;
+    transform: scale(1);
+    transform-origin: center left;
+    transition: transform 0.15s ease-in;
+    margin-bottom: 9vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.step.is-active {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+.step h2{
+    font-family: "larken" ;
+    font-weight: 700;
+    font-size: 2vw;
+    padding: 20px 20px 0;
+}
+
+.step_lungo h2{
+    font-family: "larken" ;
+    font-weight: 700;
+    font-size: 2vw;
+    padding: 20px 20px 0;
+}
+
+.step p {
+    padding: 0 20px 5px;
+    font-family: "larken", sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: 1vw;
+}
+
+.step_lungo p {
+    padding: 10px 20px 5px;
+    font-family: "larken", sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    font-size: 1vw;;
+}
+
+.row_mediterraneo{
+    margin-left: 0.1vw;
+}
+
+.normal{
+    font-size: 1vw; 
+}
+
+.traffico_inquinamento img{
+    padding: 0px 45px 20px;
+}
+
+.impatto_canale{
+    padding: 0px 20px 20px;
+}
+
+.impatto_canale2{
+    padding: 0px 20px 20px;
+}
+
+.incremento_temp{
+    padding: 0px 20px;
+}
+
+.lunghezza_canale{
+    width: 7.5vw;  
+    float: right;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+}
+
+
+.italic{
+    font-style: italic;
+    font-size: 1vw;
+}
+
+  
+.outro p {
+    font-weight: 300;
+    font-size: 1.8vw;
+    margin: 10px 14px 20px;
+    color: white;
+    line-height: 1.2;
+}
+
+.grafico{
+    text-align: center;
+}
+
+.grafico img{
+    width: 75%;
+    margin-bottom: 20px;
+}
+
+
+.container-fluid2{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-specie {
+    height: 109vh;
+}
+
+.row2{
+    width: 92%;
+    margin-left: 1.2vw;
+}
+
+.specie {
+    position: relative;
+    height: 15vw;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+
+.specie img {
+    display: none;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.granchioreale{
+    top: 10%;
+    left: 25%;
+    width: 70%;
+}
+
+.pescepalla{
+    top: 30%;
+    left: 20%;
+    width: 80%;
+}
+
+.conigliobruno{
+    top: 30%;
+    left: 25%;
+    width: 80%;
+}
+
+.pesceflauto{
+    top: 12%;
+    left: 12%;
+    width: 90%;
+}
+
+.pesceserra{
+    top: 12%;
+    left: 12%;
+    width: 90%;
+}
+
+.pescepappagallo{
+    top: 25%;
+    left: 12%;
+    width: 80%;
+}
+
+.pescescorpione{
+    top: 12%;
+    left: 20%;
+    width: 80%;
+}
+
+.corridoreatlantico{
+    top: 12%;
+    left: 20%;
+    width: 80%;
+}
+
+.lepredimare{
+    top: 12%;
+    left: 25%;
+    width: 70%;
+}
+
+.conigliostriato{
+    top: 12%;
+    left: 25%;
+    width: 70%;
+}
+
+.caulerpa{
+    top: 10%;
+    left: 55%;
+    width: 40%;
+}
+
+.medusa{
+    top: 5%;
+    left: 30%;
+    width: 50%;
+}
+
+
+
+.specie .info {
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.specie .info h1 {
+    line-height: 1;
+    font-size: 3vw;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.specie .info p {
+    margin-bottom: 0px;
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+.specie:hover img {
+    display: block;
+}
+
+
+
+.specie:hover  {
+    position: relative;
+    background-color: blue;
+    z-index: 1;
+    border: none; 
+}
+
+.prossima_specie h1{
+    font-size: 1.7vw;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+
+.foto_specie .pesce_palla{
+    position: absolute;
+    width: 22vw;
+    top: 7vh;
+    left: 21vh;
+} 
+
+.foto_specie .granchio{
+    position: absolute;
+    width: 21vw;
+    top: 0vh;
+    left: 27vh;
+} 
+
+.foto_specie .coniglio_bruno{
+    position: absolute;
+    width: 21vw;
+    top: -1vh;
+    left: 27vh;
+} 
+
+.foto_specie .pesce_flauto{
+    position: absolute;
+    width: 38vw;
+    top: 5vh;
+    left: 0;
+} 
+
+.foto_specie .caulerpa {
+    position: absolute;
+    width: 17vw;
+    top: -3vh;
+    left: 19vw;
+}
+
+.foto_specie .lepre_di_mare {
+    position: absolute;
+    width: 21vw;
+    top: 7vh;
+    left: 20vw;
+}
+
+.foto_specie .pesce_serra {
+    position: absolute;
+    width: 27vw;
+    top: 2vh;
+    left: 8vw;
+}
+
+
+
+
+
+
+.freccia img{
+    width: 4vw;
+    height: 5vh;
+}
+
+.freccia{
+    margin: 20px;
+}
+
+.nome_specie{
+    color: white;
+    width: 200%;
+    margin-bottom: 20px;
+}
+
+
+.origine{
+    float: left;
+}
+
+.info{
+    border:solid;
+    border-width: 1px;
+    border-color: white;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.origine_arrivo{
+    border:solid;
+    border-width: 1px;
+    border-color: white;
+    margin-bottom: 4vh;
+    color: white;
+
+}
+
+.origine_arrivo h1{
+    font-size: 1.7vw;
+    margin: 0;
+}
+
+.origine_arrivo p{
+    margin: 0;
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+.info_nobordo h1{
+   font-size: 1.7vw;
+    margin: 0;
+}
+
+.info_nobordo img{
+   width: 100%;
+}
+
+.row_specie{
+    margin: 5px;
+}
+
+.info_nobordo{
+    color: white;
+    margin-bottom: 4vh;
+}
+
+.info_nobordo p{
+    font-size: 1.25vw;
+    margin: 0;
+    font-weight: 300;
+}
+
+.info h1 {
+    color: white;
+    font-size: 2.5vw;
+}
+
+.nome_latino{
+    font-size: 1.25vw;
+    margin: 0 20px 30px;
+}
+
+
+
+.titolo h1{
+    color: white;
+    font-size: 190px;
+    line-height: 0.9;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-family: "larken" ;
+    font-weight: 100;
+    z-index: 1; 
+}
+
+.paragrafo p{
+    color: white;
+    margin-left: 20px;
+    margin-top: 25px;
+    font-size: 1.25vw;
+    font-weight: 300;
+}
+
+.button{
+    color: white;
+    border: solid;
+    padding: 10px;
+    border-width: 1px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.25vw;
+}
+
+.button:hover{
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+
+a, a:hover, a:active, a:visited { 
+    color: white; 
+    text-decoration: none;
+}
+
+.speciehome img{
+    position: absolute;
+    top: -2px;
+    right: 114px;
+    width: 31vw;
+    z-index: 0;
+}
+
+
+
+@media only screen and (max-width: 760px) {
+    .titolo{
+        margin: 4.5vh 1.8vh 0;
+    }
+    .titolo img{
+        width: 87vw;
+    }
+
+    .paragrafo p{
+        font-size: 3.5vw;
+        margin-left: 20px;
+        margin-top: 80px;
+     }
+
+    a, a:hover, a:active, a:visited {
+        font-size: 4.5vw;
+    }
+
+    .speciehome img {
+        position: absolute;
+        top: 150px;
+        right: 14px;
+        width: 31vw;
+    }
+
+    .container-fluid-header p {
+        font-size: 2.5vw;
+    }
+    
+    .logo {
+        float: left;
+        padding-left: 20px;
+        font-size: 28px;
+        width: 50vw;
+    }
+
+    .container-fluid-header {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        position: sticky;
+        height: 4.5vh;
+        background-color: #0a0a0a;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: white;
+        z-index: 0;
+        margin-top: 1vh;
+        font-weight: 300;
+    }
+
+    .button{
+        margin-top: 5vh;
+    }
+
+    .titolopagine {
+        font-size: 12vw;
+        color: white;
+        font-weight: 700;
+        font-style: italic;
+        margin: 20px 20px -10px;
+    }
+
+    .outro p {
+        font-weight: 300;
+        font-size: 3.5vw;
+        margin: 10px 14px 20px;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .specie .info h1 {
+        line-height: 1;
+        font-size: 5vw;
+    }
+
+    .specie {
+        position: relative;
+        height: 22vw;
+        margin-bottom: 30px;
+    }
+
+    .specie .info p {
+        margin-bottom: 0px;
+        font-size: 3vw;
+        font-weight: 300;
+    }
+
+    .btn{
+        height: auto;
+    }
+
+    .btn-menu{
+        position: fixed;
+        top: 0;
+        right: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 7vw;
+        display: block;
+        z-index: 1;
+    }
+
+
+  }
+
