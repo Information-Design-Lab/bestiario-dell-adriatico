@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>UNIRSM Design</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+		<!-- Bootstrap CSS • il css di bootstrap deve sempre essere inserito prima del nostro css!-->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="https://use.typekit.net/kzu7sbd.css">
+
+	</head>
+
+	
+	<body>
+
+		<div class="container-fluid-header">
+
+			<div class="logo">
+				<a href="index.html"><img src="img/LOGO/Logo_steso-02.svg"></a> 
+			</div>
+	   
+			<div class="about">
+			   <a href="about the project.html"> 
+					<p>About the project</p>
+				</a> 
+			</div>
+	    </div>
+
+			<div class="home">
+
+		
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="titolo">
+							<img src="img/LOGO/Logo_Home-01.svg">
+						</div>	
+					</div>		
+				</div>
+
+			
+
+				<div class="row">
+					<div class="col-md-8">
+						<div class="paragrafo">
+							<p>Negli ultimi decenni, nuove specie marine sono giunte nel Mar Adriatico, 
+								determinando da un lato, un arricchimento della biodiversità locale, ma dall’altro 
+								anche un’importante destabilizzazione dell’intero sistema marino.
+								<br> 
+								<br>
+								I cambiamenti climatici e le attività umane stanno modificando gli equilibri del mondo,
+								obbligando così numerose specie animali a diventare nomadi: costretti a spostarsi per 
+								sopravvivere, alla ricerca di un habitat vivibile. </p>
+						</div>	
+					</div>		
+				</div>
+
+				<div class="row">
+						<div class="col-md-3 col-sm-12">
+							<a href="cause.html">	
+								<div class="button button-1">
+									Indaga le cause 
+								</div>	
+							</a>		
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<a href="bestiario.html">
+								<div class="button button-2">
+									Scopri il bestiario						
+								</div>	
+							</a>	
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<a href="Iniziative.html">
+								<div class="button button-3">
+									Partecipa alle iniziative
+								</div>
+							</a>	
+						</div>
+						<div class="col-md-3 col-sm-12">
+							<a href="https://www.youtube.com/watch?v=yH3w5qT7Caw" target="_blank">
+								<div class="button button-3">
+									Installazione
+								</div>
+							</a>	
+						</div>
+						
+				</div>
+
+
+
+				
+
+	</div>
+
+
+		
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+		<script src="js/scrollama.js"></script>
+		<script src="js/bootstrap.bundle.js"></script>
+		<script src="js/scripts.js"></script>
+
+		<div id="banner-images"> </div>
+		<script> 
+			var images = ['Caulerpa.png', 'granchio_blu.png', 'corridore atlantico.png', 'flauto.png', 'lepre.png', 'noce2.png','pescepalla.png','serra.png','luridus.png'];
+ 
+			$('<img class="fade-in" src="img/MOD_HOMEPAGE/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');
+		</script>
+		
+	</body>
+</html>
